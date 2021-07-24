@@ -1,0 +1,16 @@
+#Config v1.0
+Messages:
+  prefix: "&6[&eDivineCoins&6]: "
+  give: "&eYou just gave %Amount% to %Player%"
+  receive: "&eYou just received %Amount% from %Player%"
+  take: "&eYou just took %Amount% from %Player%"
+  set: "&eYou just set %Player%'s coins balance to %Amount%"
+  check-others: "&e%Player%'s coins are %Amount%"
+  check-self: "&eYour coins are %Amount%"
+  pay: "&eYou just sent %Amount% to %Player%"
+  reload: "&cSuccessfully reloaded the config!"
+
+Economy:
+  starting-amount: 0
+  min-payment: 1
+  max-payment: 10000000
