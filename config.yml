@@ -1,4 +1,4 @@
-#Config v1.0
+#Config v1.1
 Messages:
   prefix: "&6[&eDivineCoins&6]: "
   give: "&eYou just gave %Amount% to %Player%"
@@ -14,3 +14,65 @@ Economy:
   starting-amount: 0
   min-payment: 1
   max-payment: 10000000
+ # action-bar-messages: false
+
+GUI:
+  enabled: true
+  Main-Menu:
+    #Size can be between 1-6
+    size: 3
+    title: "&eCoins Main Menu"
+    #Fills the gui's borders with the specified item. leave empty "" to disable.
+    fill-border-with-item: "RED_STAINED_GLASS_PANE"
+    fill-item-name: "&7"
+    fill-item-lore:
+      - "&7&m-----------------------"
+    #All items listed on the gui.
+    Items:
+      item1:
+        material: "EMERALD"
+        name: "&6Shop menu."
+        lore:
+          - ""
+          - "&f&nClick to open the coins shop menu&f."
+        place-X: 4
+        place-Y: 1
+        action: "OPEN_SHOP_GUI"
+  Shop-Menu:
+    enabled: true
+    size: 5
+    title: "&eCoins Shop"
+    #Fills the gui's borders with the specified item. leave empty "" to disable.
+    fill-border-with-item: "ORANGE_STAINED_GLASS_PANE"
+    fill-item-name: "&7"
+    fill-item-lore:
+      - "&7&m-----------------------"
+    Items:
+      item1:
+        #This will be displayed in the gui
+        material: "ENDER_PEARL"
+        #This will be displayed in the gui
+        name: "&a&lClick to purchase an enderpearl"
+        #This will be displayed in the gui
+        lore:
+          - ""
+          - "&f&nBuy for:&a %Price%"
+        place-X: 1
+        place-Y: 1
+        #price revolving coins.
+        price: 10
+        #Amount to display in the gui.
+        amount: 1
+        #Commands to execute when the player purchases the specified item.
+        #Use %Player% to get the player name.
+        commands:
+          - "give %Player% enderpearl 1"
+        #The message the player will receive after purchasing the specified item.
+        #Use %Price% to get the item's price
+        message: "&aYou just purchased an enderpearl with &6%Price% coins."
+        #The message the player will receive if he does not have enough coins.
+        not-enough-coins: "&cYou do not have enough coins to purchase this item!"
+
+
+
+
