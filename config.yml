@@ -37,6 +37,7 @@ GUI:
           - "&f&nClick to open the coins shop menu&f."
         place-X: 4
         place-Y: 1
+        #Leave "" if you want the item to act as normal. "OPEN_SHOP_GUI" will open the shop gui when clicked.
         action: "OPEN_SHOP_GUI"
   Shop-Menu:
     enabled: true
