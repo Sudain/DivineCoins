@@ -3,7 +3,7 @@ import io.github.sudain.Hooks.Coins
 
 //Example:
 
-public class EditCoinsFromPlayers{
+public class CoinsUtilities{
    
    public static void AddCoins(UUID id, int Amount){
       Coins.addCoins(id, Amount);
