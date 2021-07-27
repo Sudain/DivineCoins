@@ -12,8 +12,8 @@ public class CoinsUtilities{
       Coins.removeCoins(id, Amount);
       //Checks if the player has enough coins to be removed first. 
    }
-   public static void CheckCoins(UUID id){
-      int Coins = Coins.getCoins(id);
+   public static int CheckCoins(UUID id){
+      return Coins.getCoins(id);
    }
    
 }
