@@ -1,4 +1,4 @@
-#Config v1.1
+#Config v1.2.0
 Messages:
   prefix: "&6[&eDivineCoins&6]: "
   give: "&eYou just gave %Amount% to %Player%"
@@ -37,7 +37,6 @@ GUI:
           - "&f&nClick to open the coins shop menu&f."
         place-X: 4
         place-Y: 1
-        #Leave "" if you want the item to act as normal. "OPEN_SHOP_GUI" will open the shop gui when clicked.
         action: "OPEN_SHOP_GUI"
   Shop-Menu:
     enabled: true
@@ -57,12 +56,18 @@ GUI:
         #This will be displayed in the gui
         lore:
           - ""
-          - "&f&nBuy for:&a %Price%"
+          - "&fLeft-Click to buy for:&a &n%Price%&f Coins."
+          - "&fRight-Click to sell for:&c &n%Sell-Price%&f Coins."
+          - ""
+          - "&f&nCoins:&6 %Coins%"
         place-X: 1
         place-Y: 1
-        #price revolving coins.
+        #price for buying the specific item with coins.
         price: 10
+        #Sell price of the item. Leave to 0 to disable.
+        sell-price: 8
         #Amount to display in the gui.
+        #Amount that will be sold from the item.
         amount: 1
         #Commands to execute when the player purchases the specified item.
         #Use %Player% to get the player name.
@@ -71,8 +76,11 @@ GUI:
         #The message the player will receive after purchasing the specified item.
         #Use %Price% to get the item's price
         message: "&aYou just purchased an enderpearl with &6%Price% coins."
+        message-sell: "&aYou just sold an enderpearl for &c%Sell-Price%&a coins."
         #The message the player will receive if he does not have enough coins.
         not-enough-coins: "&cYou do not have enough coins to purchase this item!"
+        #The message the player will receive if he does not have enough items to sell.
+        not-enough-items: "&cYou do no have enough items to sell."
 
 
 
