@@ -1,4 +1,4 @@
-#Config v1.2.0
+#Config v1.3.0
 Messages:
   prefix: "&6[&eDivineCoins&6]: "
   give: "&eYou just gave %Amount% to %Player%"
@@ -14,7 +14,30 @@ Economy:
   starting-amount: 0
   min-payment: 1
   max-payment: 10000000
- # action-bar-messages: false
+  
+
+Blocks-Feature:
+  enabled: true
+  blacklisted-worlds:
+    - "world_the_end"
+  #Use %Coins% to get the coins given to the player & %Type% to get the block name.
+  message: "&aYou just received &6%Coins% coins&a for breaking a(n) &e%Type% block"
+  #If players break and replace the block to duplicate coins, they will not receive any coins from the already broken blocks.
+  Blocks:
+    block1:
+      type: "IRON_ORE"
+      coins: 4
+    block2:
+      type: "EMERALD_ORE"
+      coins: 12
+    block3:
+      type: "GOLD_ORE"
+      coins: 8
+#   block4:
+#     type: "SPONGE"
+#     coins: 5
+
+
 
 GUI:
   enabled: true
